@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Переменные в CSS</title>
+	</head>
+	<style>
+		:root {
+			--primary-color: blue;
+			--unit: 2.25rem;
+			--primary-h: 150;
+			--primary-s: 50%;
+			--primary-l: 50%;
+		}
+
+		.section {
+			color: var(--primary-color);
+		}
+		.article {
+			background-color: var(--primary-color);
+			margin-bottom: var(--unit);
+		}
+		.block {
+			--primary-color: red;
+			color: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+		}
+		.block:hover {
+			--primary-l: 80%;
+		}
+	</style>
+	<body>
+		<script>
+			element.style.getPropertyValue("--unit");
+			getComputedStyle(element).getPropertyValue("--my-var");
+		</script>
+	</body>
+</html>
